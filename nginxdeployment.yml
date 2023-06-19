@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 354517960452.dkr.ecr.ap-south-1.amazonaws.com/dsl
+        image: nginx:latest
         ports:
         - containerPort: 80
+          imagePullSecrets:
+           - name: regcred
 ---
 apiVersion: v1
 kind: Service
