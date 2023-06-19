@@ -1,0 +1,18 @@
+ node {    
+          stage('Deploy') {
+            // Deploy application using kubectl
+            sh 'kubectl apply -f nginxdeployment.yml'
+          }
+          stage('rollout') {
+            // Wait for deployment to finish
+            sh 'kubectl rollout status deployment/nginxdeployment.yml'
+          }
+          stage('loadbalance') {
+            // Expose service using LoadBalancer
+            sh 'kubectl expose deployment nginxdeployment.yml --type=LoadBalancer --port=80 --target-port=80'
+          }
+           
+           
+      }
+        
+      
