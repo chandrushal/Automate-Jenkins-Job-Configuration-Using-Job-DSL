@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_assessment_new_1698657158297-push-trigger-input-set
+  identifier: Build_assessment_new_1698657158297pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: pipeline
+  pipeline:
+    identifier: Build_assessment_new_1698657158297
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
