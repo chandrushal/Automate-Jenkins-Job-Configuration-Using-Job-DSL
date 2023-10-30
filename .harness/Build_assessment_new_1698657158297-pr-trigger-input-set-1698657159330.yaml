@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_assessment_new_1698657158297-pr-trigger-input-set
+  identifier: Build_assessment_new_1698657158297prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: pipeline
+  pipeline:
+    identifier: Build_assessment_new_1698657158297
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
